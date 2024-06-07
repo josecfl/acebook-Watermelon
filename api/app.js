@@ -8,7 +8,7 @@ const postsRouter = require("./routes/posts");
 const authenticationRouter = require("./routes/authentication");
 const tokenChecker = require("./middleware/tokenChecker");
 const commentsRouter = require("./routes/comments");
-
+const path = require("path");
 const app = express();
 
 // Allow requests from any client
@@ -19,6 +19,8 @@ app.use(cors());
 // Parse JSON request bodies, made available on `req.body`
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));
+app.use(express.static(path.join(__dirname, "dist")));
+
 
 // API Routes
 app.use("/users", usersRouter);
