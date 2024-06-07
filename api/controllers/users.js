@@ -17,7 +17,7 @@ const create = async (req, res) => {
 
         // Create a profile for the user with default values
         const profile = new Profile({
-          bio: "default bio",
+          bio: "Default Bio",
           author: user._id,
           profilePictureURL: "uploads/default_profile_pic.jpg",
         });
@@ -27,7 +27,7 @@ const create = async (req, res) => {
         console.log("User created, id:", user._id.toString());
         res
           .status(201)
-          .json({ message: "User and profile created successfully" });
+          .json({ message: "User and Profile created successfully" });
       } catch (error) {
         // Handle errors
         console.error(error);

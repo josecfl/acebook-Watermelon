@@ -3,6 +3,13 @@
   margin-top: 50px;
 }
 
+.title {
+  border: 5px solid #1f62ab;
+  padding: 45px;
+  color: #000000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .box-container {
   display: flex;
   justify-content: center;

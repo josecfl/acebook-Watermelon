@@ -67,35 +67,44 @@ export const SignupPage = () => {
     <>
       <h2 className="signup">Signup</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username:</label>
+        <div className="inputGroup">
         <input
+          type="text"
+          required=""
+          autoComplete="off"
           placeholder="Username"
           id="username"
-          type="username"
           value={username}
           onChange={handleUsernameChange}
         />
-        <br />
-        <label htmlFor="email">Email:</label>
+        </div>
+        <div className="inputGroup">
         <input
+          required=""
+          autoComplete="off"
           placeholder="Email"
           id="email"
           type="text"
           value={email}
           onChange={handleEmailChange}
         />
-        <br />
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="email"></label>
+        </div>
+        <div className="inputGroup">
         <input
+          required=""
+          autoComplete="off"
           placeholder="Password"
           id="password"
           type="password"
           value={password}
           onChange={handlePasswordChange}
         />
+        <label htmlFor="password"></label>
+        </div>
         <br />
         {error && <p className="error">{error}</p>}
-        <input role="submit-button" id="submit" type="submit" value="Submit" />
+        <input className="submit" role="submit-button" id="submit" type="submit" value="Submit" />
       </form>
     </>
   );

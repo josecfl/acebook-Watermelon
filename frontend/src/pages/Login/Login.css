@@ -1,22 +1,65 @@
-input {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: inline-block;
-  align-items: center;
-  vertical-align: middle;
-  margin-left: 20px;
-}
-
-label {
-  display: inline-block;
-
-  padding-top: 5px;
-  text-align: right;
-  width: 140px;
-}
 
 .login {
-  border: 5px solid powderblue;
-  padding: 30px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 50px;
+  border: 5px solid #1f62ab;
+  padding: 50px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.inputGroupLogin {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 190px;
+  display: flex;
+  margin-left: 32px;
+}
+
+.inputGroupLogin input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroupLogin label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+
+.inputGroupLogin :is(input:focus, input:valid) {
+  border-color: #1f62ab;
+}
+
+.submit {
+    display: inline-block;
+    width: 105px;
+    padding: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 7px;
+    border: solid white;
+    transition: background-color 0.3s ease;
+  }
+
+.submit {
+  background-color: #1f62ab;
+  
+}
+
+.submit:hover {
+  background-color: #1da4e3;
 }
