@@ -5,7 +5,7 @@ import { useState } from "react";
 // import { updateMyBio } from "../../services/updateBio";
 import { updateProfile } from "../../services/updateProfile";
 
-// import DOMpurify from "dompurify";
+import DOMPurify from "dompurify";
 
 const Bio = ({ bio, setBio, username }) => {
   const [newbio, setNewBio] = useState("");
@@ -16,12 +16,15 @@ const Bio = ({ bio, setBio, username }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
+    const sanitizedBio = DOMPurify.sanitize(newbio);
+
 
     try {
-      await updateProfile(token, { bio: newbio }).then(
-        (data) => console.log("!!data:", data),
-        setBio(newbio),
+      await updateProfile(token, { bio: sanitizedBio }).then(
+        (data) => console.log("!!data:", data, "sanatized bio: ", sanitizedBio),
+        setBio(sanitizedBio),
         setNewBio("")
+        
       );
 
       // location.reload();

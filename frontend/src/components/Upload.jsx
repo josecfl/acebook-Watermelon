@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 
 // import { updateMyImage } from "../services/updateImage";
-import React, { useState, useEffect } from "react";
+import { useState,} from "react";
 import axios from "axios";
 import { updateProfile } from "../services/updateProfile";
 
