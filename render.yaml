@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: backend-service
+    env: node
+    buildCommand: cd api && npm install
+    startCommand: cd api && npm start
+    envVars:
+      - key: MONGO_URI
+        value: acebook
+  - type: static-site
+    name: frontend-service
+    buildCommand: cd frontend && npm install && npm run build
+    publishDir: frontend/build

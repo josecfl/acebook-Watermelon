@@ -28,6 +28,7 @@ const Navbar = () => {
             My Profile
           </button>
         )}
+        &nbsp;
         {currentPath !== "/posts" && (
           <button className="feed-button" onClick={handleFeed}>
             Feed

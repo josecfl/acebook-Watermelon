@@ -35,22 +35,27 @@ const Bio = ({ bio, setBio, username }) => {
   };
   return (
     <div>
-      <h3>My Username: </h3>
+      <h3 className="usernametitle">Username</h3>
       <p className="bio"> {username}</p>
-      <br />
       <div className="bio_container">
-        <h4>My Bio:</h4>
+        <h4 className="biotitle">Bio</h4>
         <p className="bio"> {bio}</p>
         <form onSubmit={handleSubmit}>
+          <div className="biochangeform">
+          <div className="input-wrapper">
           <input
-            placeholder="type your new bio"
+            className="bioinput"
+            placeholder="Type here"
+            name="text"
             id="bio"
             type="text"
             value={newbio}
             onChange={handleBioChange}
           />
-
-          <button type="submit">update bio</button>
+          </div>
+          <button className="updatebutton" type="submit">Update</button>
+          <br/>
+          </div>
         </form>
       </div>
     </div>
