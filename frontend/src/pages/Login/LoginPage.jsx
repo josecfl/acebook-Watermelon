@@ -8,7 +8,6 @@ export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState("");
 
   const handleSubmit = async (event) => {
@@ -23,7 +22,7 @@ export const LoginPage = () => {
       navigate("/posts");
     } catch (err) {
       console.error(err);
-      console.log({ CleanEmail });
+      setError("Login failed. Please check your credentials.");
       navigate("/login");
     }
   };
@@ -40,27 +39,36 @@ export const LoginPage = () => {
     <>
       <h2 className="login">Login</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
-        <input
-          placeholder="email"
-          id="email"
-          type="text"
-          value={email}
-          onChange={handleEmailChange}
-        />
+        <div className="inputGroupLogin">
+          <input
+            type="text"
+            required=""
+            autoComplete="off"
+            placeholder="Email"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+          />
+          <label htmlFor="email"></label>
+        </div>
+        <div className="inputGroupLogin">
+          <input
+            type="password"
+            required=""
+            autoComplete="off"
+            placeholder="Password"
+            id="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
+          <label htmlFor="password"></label>
+        </div>
         <br />
-        <label htmlFor="password">Password:</label>
-        <input
-          placeholder="password"
-          id="password"
-          type="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-        <hr />
-        <input role="submit-button" id="submit" type="submit" value="Submit" />
+        <input className="submit" role="submit-button" id="submit" type="submit" value="Submit" />
+        <div className="Space">
+        <br />
+        </div>
       </form>
-      {/* <script type="text/javascript" src="dist/purify.min.js"></script> */}
     </>
   );
 };

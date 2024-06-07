@@ -58,8 +58,8 @@ const Upload = () => {
 
   return (
     <form id="form" onSubmit={handleSubmit} encType="multipart-form-data">
-      <input id="file" type="file" onChange={handleFileChange} />
-      <button type="submit">Upload</button>
+      <input className="choosefile" id="file" type="file" onChange={handleFileChange} />
+      <button className="uploadbutton" type="submit">Upload</button>
       <hr></hr>
     </form>
   );

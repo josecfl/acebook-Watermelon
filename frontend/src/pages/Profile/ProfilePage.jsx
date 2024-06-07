@@ -38,14 +38,14 @@ const ProfilePage = () => {
   return (
     <div>
       <Navbar />
-      <h1>Profile page</h1>
-      {/* <h2>{profilePictureURL}this is a picture</h2> */}
+      <h1 className="profiletitle">Profile</h1>
+      <br />
       <img
         src={`http://localhost:3000/${profilePictureURL}`}
         alt="Profile Picture"
       />
       <Upload />
-      {/* <Download /> */}
+      <br />
       <Bio bio={bio} setBio={setBio} username={username} />
     </div>
   );

@@ -8,6 +8,7 @@
   background-color: powderblue;
   margin-left: 90px;
   border-radius: 20px;
+  border: solid white;
 }
 #submitComment:hover {
   background-color: #3eb489;

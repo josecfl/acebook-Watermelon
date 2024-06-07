@@ -11,7 +11,7 @@
 }
 
 #newpost {
-  width: 250px;
+  width: 500px;
   height: 100px;
   vertical-align: top;
   border-width: 5px;
@@ -24,8 +24,10 @@
   font-family: monospace;
   flex-direction: row;
   background-color: powderblue;
-  margin-left: 220px;
+  margin-left: 460px;
+  margin-top: 5px;
   border-radius: 20px;
+  border: solid white;
 }
 
 #submitPost:hover {

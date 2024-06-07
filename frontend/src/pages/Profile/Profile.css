@@ -1,5 +1,82 @@
+.profiletitle {
+  font-size: 30px;
+  padding: 5px;
+  font-family: 'Segoe UI', sans-serif;
+  opacity: 1;
+  color: #353935;
+}
+
+.choosefile {
+  font-size: 18px;
+  border: none;
+  background: white;
+  border: 1px solid var(--color);
+  color: var(--color);
+  padding: 1rem 2rem;
+}
+  
+.uploadbutton {
+  background: #3eb489;
+  border-radius: 999px;
+  box-shadow: powderblue 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 14px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.updatebutton {
+  background: #3eb489;
+  border-radius: 999px;
+  box-shadow: powderblue 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 14px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+
+.usernametitle {
+  color: #353935;
+  font-size: 28px;
+  font-family: 'Segoe UI', sans-serif;;
+}
+
+.biotitle {
+  color: #353935;
+  font-size: 28px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .bio {
-  border: 2px powderblue solid;
+  border: 2px black solid;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  background-color: powderblue;
 }
 
 .container {
@@ -19,4 +96,28 @@
   width: 300px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.input-wrapper input {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 13em;
+  border-radius: 1rem;
+  color: #353935;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: text;
+}
+
+.input-wrapper input:focus {
+  outline-color: white;
+}
+
+.biochangeform {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 50px;
 }
