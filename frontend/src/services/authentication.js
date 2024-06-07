@@ -14,7 +14,7 @@ export const login = async (email, password) => {
     },
     body: JSON.stringify(payload),
   };
-
+  console.log(requestOptions);
   const response = await fetch(`${BACKEND_URL}/tokens`, requestOptions);
 
   // docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
